@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Chromakopia';
+    src: url('src/fonts/Poleno_SemiBold.otf') format('woff2'), url('src/fonts/Poleno_SemiBold.otf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-image: url('src/bg.png');
+    background-size: cover;
+    font-family: 'Chromakopia', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.8s ease, background-color 0.3s ease;
+    animation: fadeInBody 0.8s forwards;
+}
+
+@keyframes fadeInBody {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.Tracklist {
+    list-style-type: none;
+    position: relative;
+    padding: 10px;
+    padding-top: 1px;
+    margin: 0 auto;
+    max-width: fit-content;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 6%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+a {
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 6%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    color: #000;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    margin: 5px;
+}
+
+a:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    border-radius: 6%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#tyler {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    margin: 0;
+    width: 60%;
+    z-index: -1;
+    opacity: 1;
+}
